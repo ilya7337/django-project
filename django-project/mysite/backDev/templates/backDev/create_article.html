@@ -1,0 +1,15 @@
+{% extends "backDev/base.html" %}
+
+{% block title %}Создать статью{% endblock title %}
+
+{% block body %}
+    <h1>Create Article</h1>
+        {% csrf_token %}
+        <form method="post">
+            {% csrf_token %}
+            {{form.media}}
+            {{ form.as_p }}
+            <button type="submit">Save</button>
+        </form>
+{% endblock body %}
+    

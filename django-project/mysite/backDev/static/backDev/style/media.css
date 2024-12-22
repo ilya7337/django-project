@@ -1,0 +1,10 @@
+@media screen and (max-width: 800px) {
+	.my-navbar{
+        display: flex;
+    }
+
+    .my-left-menu{
+        display: none !important;
+    }
+
+}

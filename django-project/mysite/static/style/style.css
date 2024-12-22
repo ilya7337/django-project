@@ -1,0 +1,10 @@
+.my-navbar{
+    display: none;
+}
+
+
+@media screen and (max-width: 800px){
+    .my-navbar{
+        display: flex;
+    }
+}

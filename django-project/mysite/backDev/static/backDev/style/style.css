@@ -1,0 +1,21 @@
+.my-navbar{
+    display: none;
+}
+
+.my-left-menu{
+    position: fixed;
+    height: 100vw;
+}
+
+.site-header {
+    background-color: #f8f9fa; 
+    padding: 10px 0; 
+    text-align: center; 
+    border-bottom: 1px solid #dee2e6; 
+}
+
+.container-header div {
+    margin: 0; 
+    font-size: 24px; 
+    color: #343a40; 
+}
