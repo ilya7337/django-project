@@ -1,3 +1,12 @@
+*{
+    box-sizing: border-box;
+}
+
+p, div, h1, h2, h3, h4, h5, h6{
+    padding: 0;
+    margin: 0;
+}
+
 .my-navbar{
     display: none;
 }
@@ -7,15 +16,59 @@
     height: 100vw;
 }
 
+.container-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .site-header {
     background-color: #f8f9fa; 
     padding: 10px 0; 
     text-align: center; 
-    border-bottom: 1px solid #dee2e6; 
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 47px;
 }
 
-.container-header div {
-    margin: 0; 
-    font-size: 24px; 
-    color: #343a40; 
+.hub-logo:hover svg path{
+    fill: black;
+}
+
+.my-logo{
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.site-header{
+    padding: 3px 30px;
+}
+
+.container-fluid{
+    padding-top: 47px !important;
+}
+
+.main-container{
+    max-width: 900px;
+    margin: auto;
+}
+
+.main-container p{
+    font-size: 18px;
+    margin-bottom: 1.7em;
+}
+
+.main-container h1{
+    font-size: 46px;
+    margin-bottom: 0.5em;
+}
+
+.main-container h2{
+    font-size: 32px;
+    margin-bottom: 1em;
+}
+
+.main-container h3{
+    font-size: 20px;
+    margin-bottom: 1em;
 }

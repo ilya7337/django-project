@@ -1,0 +1,46 @@
+{% extends "backDev/base.html" %}
+
+{% block title %}
+    {% if error %}
+        Страница не найдена
+    {% endif %}
+        {{article.title}}
+{% endblock title %}
+
+{% block nav_links %}
+    {% for elem in nav %}
+        {% if elem.slug %}
+            <li class="nav-item">
+                <a class='nav-link' href="{% url 'get_article' slug=elem.slug %}">{{elem.title}}</a>
+            </li>
+        {% else %}
+            <li class="nav-item">
+                <a class='nav-link' href="{% url 'main' %}">{{elem.title}}</a>
+            </li>
+        {% endif %}
+    
+    {% endfor %}
+{% endblock nav_links %}
+
+{% block nav_links_left %}
+{% for elem in nav %}
+    {% if elem.slug %}
+        <li class="nav-item">
+            <a class='nav-link' href="{% url 'get_article' slug=elem.slug %}">{{elem.title}}</a>
+        </li>
+    {% else %}
+        <li class="nav-item">
+            <a class='nav-link' href="{% url 'main' %}">{{elem.title}}</a>
+        </li>
+    {% endif %}
+
+{% endfor %}
+{% endblock nav_links_left %}
+
+
+{% block main %}
+    {% if error %}
+        <h1>Страница не найдена</h1>
+    {% endif %}
+        {{article.content|safe}}
+{% endblock main %}

@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'backDev.apps.BackdevConfig',
     'ckeditor',
     'ckeditor_uploader'
-    
 ]
 
 CKEDITOR_BASEPATH = '/static/ckeditor/ckeditor/'
