@@ -8,16 +8,28 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     {% load static %}
+    {% block load_files %}
+    {% endblock load_files %}
     <script src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
     <link rel="stylesheet" href="{% static 'backDev/style/style.css' %}">
     <link rel="stylesheet" href="{% static 'backDev/style/media.css' %}">
+    <link rel="stylesheet" href="{% static 'backDev/style/last_vac.css' %}">
     <title> 
         {% block  title%}
         {% endblock  %}    
     </title>
 </head>
 <body>
-
+    <div class="loader" id='loader'>
+        <div class="duo duo1">
+          <div class="dot dot-a"></div>
+          <div class="dot dot-b"></div>
+        </div>
+        <div class="duo duo2">
+          <div class="dot dot-a"></div>
+          <div class="dot dot-b"></div>
+        </div>
+    </div>
     <header class="site-header text-left fixed-top">
         <div class="container-header">
             <a href="{% url 'main' %}">
@@ -28,7 +40,7 @@
             </a>
         </div>
     </header>
-
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-light my-navbar fixed-top">
         <a href="{% url 'main' %}">
             <img src="{% static 'backDev/img/logo.jpeg' %}" alt="Логотип" class="my-logo"> 
@@ -40,7 +52,7 @@
             <ul class="navbar-nav">
                 {% block  nav_links %}{% endblock nav_links %} 
                 <li class="nav-item">
-                    <a class='nav-link' href="{% url 'get_last_vac'%}">Последние вакансии</a>
+                    <a class='nav-link' href="{% url 'get_last_vac_view'%}">Последние вакансии</a>
                 </li>
             </ul>
         </div>
@@ -54,7 +66,7 @@
                     <ul class="nav flex-column">
                         {% block  nav_links_left %}{% endblock nav_links_left %} 
                         <li class="nav-item">
-                            <a class='nav-link' href="{% url 'get_last_vac'%}">Последние вакансии</a>
+                            <a class='nav-link' href="{% url 'get_last_vac_view'%}">Последние вакансии</a>
                         </li>
                     </ul>
                 </div>
@@ -62,7 +74,8 @@
 
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 {% block main %}{% endblock  %}
-                <footer class="footer text-center">
+                
+                <footer class="footer text-center" id='footer'>
                     <div class="container">
                         <p class="text-muted text-right">
                             Ахтямов Илья Рафисович РИ-230911

@@ -1,0 +1,42 @@
+.vacancy {
+    width: 80%;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+}
+
+.vac-title{
+    font-size: 26px;
+    margin-bottom: 5px;
+}
+
+.show-description{
+    border: none;
+    background-color: #004b4c;
+    color: white;
+    transition: ease-in-out all .3s;
+    border-radius: 10px;
+}
+
+.show-description:hover{
+    background-color: #003839;
+}
+
+.vac-h1{
+    margin-bottom: 20px;
+}
+
+.vac-published_at{
+    font-style: italic;
+}
+
+.vac-salary{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.vac-elem{
+    font-size: 18px;
+    margin-bottom: 5px;
+}

@@ -1,8 +1,15 @@
 {% extends "backDev/base.html" %}
 
+{% block load_files %}
+{% load static %}
+<script src={% static "backDev/js/last_vac.js" %}></script>
+{% endblock load_files %} 
+
 {% block title %}
 Последние вакансии
 {% endblock title %}
+
+
 
 {% block nav_links %}
     {% for elem in nav %}
@@ -35,11 +42,9 @@
 
 
 {% block main %}
-    <h1>Последние вакансии Backend-программиста за 24 часа</h1>
-    {% for vacancy in vacancies %}
-        <div class='vacancy'>
-            <div class='vac-title'>{{vacancy.title}}</div>
-            <div>{{vacancy.company}}</div>
+    <h1 class='vac-h1'>Последние вакансии Backend-программиста за 24 часа</h1>
+        <div class='row' id='vacancies'>
         </div>
-    {% endfor %}
 {% endblock main %}
+
+

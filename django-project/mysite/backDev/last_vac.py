@@ -1,10 +1,11 @@
 import asyncio
 import aiohttp
 from bs4 import BeautifulSoup
-import datetime
+from django.http import JsonResponse
+import xml.etree.ElementTree as ET
+
 
 def get_salary(salary):
-    """Извлекает зарплату"""
     if salary is None:
         return "Доход не указан"
     else:
@@ -68,9 +69,9 @@ async def get_vacancies(profession, session, result, lock):
             'id': vacancy['id'],
             'title': vacancy['name'],
             'company': vacancy['employer']['name'],
-            'salary_info': get_salary(vacancy['salary']),
+            'salary': get_salary(vacancy['salary']),
             'region': vacancy['area']['name'],
-            'published_at': vacancy['published_at'],
+            'published_at': vacancy['published_at'][:10],
             'description': '',
             'skills': ''
         }
@@ -95,7 +96,8 @@ async def last_vac():
     return result
 
 
-def get_last_vac():
+def get_last_vac(request):
     """Возвращает список словарей с последними 10 вакансиями"""
     res = asyncio.run(last_vac())
-    return sorted(res.values(), key=lambda vac: vac['published_at'][:-1], reverse=True)[:10]
+    res = sorted(res.values(), key=lambda vac: vac['published_at'][:-1], reverse=True)[:10]
+    return JsonResponse(res, safe=False)
