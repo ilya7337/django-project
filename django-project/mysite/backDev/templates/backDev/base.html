@@ -11,6 +11,7 @@
     {% block load_files %}
     {% endblock load_files %}
     <script src="{% static 'ckeditor/ckeditor-init.js' %}"></script>
+    
     <link rel="stylesheet" href="{% static 'backDev/style/style.css' %}">
     <link rel="stylesheet" href="{% static 'backDev/style/media.css' %}">
     <link rel="stylesheet" href="{% static 'backDev/style/last_vac.css' %}">
@@ -71,7 +72,7 @@
                     </ul>
                 </div>
             </nav>
-
+            
             <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
                 {% block main %}{% endblock  %}
                 
@@ -87,6 +88,6 @@
     </div>
     
    
-
+    <script src="{% static 'backDev/js/top_skills.js' %}"></script>
 </body>
 </html>

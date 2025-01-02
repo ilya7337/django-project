@@ -16,3 +16,10 @@ class Article(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class TopSkills(models.Model):
+    year = models.IntegerField()
+    title = models.CharField(max_length=30)
+    image = models.ImageField(upload_to='top_skills_img/')
+    table = RichTextUploadingField()

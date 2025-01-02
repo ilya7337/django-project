@@ -10,9 +10,9 @@ def get_salary(salary):
         return "Доход не указан"
     else:
         if salary['from'] is None and salary['to'] is not None:
-            return f"До {salary['to']} {salary['currency']}."
+            return f"До {salary['to']} {salary['currency']}"
         elif salary['from'] is not None and salary['to'] is None:
-            return f"От {salary['from']} {salary['currency']}."
+            return f"От {salary['from']} {salary['currency']}"
         else:
             return f"От {salary['from']} до {salary['to']} {salary['currency']}"
 
