@@ -23,3 +23,6 @@ class TopSkills(models.Model):
     title = models.CharField(max_length=30)
     image = models.ImageField(upload_to='top_skills_img/')
     table = RichTextUploadingField()
+
+    def __str__(self):
+        return f"{self.title} {self.year}"

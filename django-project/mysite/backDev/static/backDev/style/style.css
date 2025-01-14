@@ -7,8 +7,17 @@ p, div, h1, h2, h3, h4, h5, h6{
     margin: 0;
 }
 
+h1{
+  margin-bottom: 15px;
+  overflow-wrap: break-word;
+}
+
 .my-navbar{
     display: none;
+}
+
+.img-main{
+  max-width: 600px;
 }
 
 .my-left-menu{
@@ -49,8 +58,8 @@ p, div, h1, h2, h3, h4, h5, h6{
 }
 
 .main-container{
-    max-width: 900px;
-    margin: auto;
+    max-width: 1000px;
+    
 }
 
 .main-container p{
@@ -157,3 +166,51 @@ p, div, h1, h2, h3, h4, h5, h6{
     animation-direction: reverse;
   }
   
+
+.information-block{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.information-block img{
+  max-width: 600px !important;
+  height: auto !important;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  flex: 1 1;
+}
+
+.information-block table{
+  font-size: 12px;
+  border-collapse: collapse;
+}
+
+.information-block table th, td{
+  padding: 3px;
+  text-align: left;
+}
+
+
+.top-skills-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.top-skills-container img{
+  max-width: 600px !important;
+  height: auto !important;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  flex: 1 1;
+}
+
+.top-skills-container table{
+  font-size: 14px;
+  border-collapse: collapse;
+}

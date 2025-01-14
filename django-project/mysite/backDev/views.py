@@ -1,8 +1,7 @@
 from django.shortcuts import render
-from .forms import ArticleForm
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpRequest
 from .models import Article
-
+from django.shortcuts import redirect
 
 def main_article(request: HttpRequest):
     nav = Article.objects.values('title', 'slug')
@@ -29,6 +28,7 @@ def get_last_vac_view(request: HttpRequest):
     return render(request, 'backDev/last_vac.html', {'nav': nav})
 
 
-
+def page_not_found(request, exception):
+    return redirect('backDev:main')
 
 

@@ -1,3 +1,12 @@
+@media screen and (max-width: 1200px) {
+
+    .top-skills-container{
+        flex-direction: column;
+    }
+}
+
+
+
 @media screen and (max-width: 800px) {
 	.my-navbar{
         display: flex;
@@ -11,4 +20,40 @@
         display: none;
     }
 
+    .information-block{
+    flex-direction: column;
+    }
+
+    .main-container{
+        margin-left: 0;
+    }
+    
+}
+
+
+@media screen and (max-width: 650px) {
+
+    .top-skills-container img{
+        width: 100% !important;
+        height: 200px !important;
+        text-align: center;
+        }
+
+    .information-block img{
+        width: 100% !important;
+        height: 200px !important;
+        text-align: center;
+        }
+
+    .vacancy{
+        width: 90%;
+    }
+
+    .img-main{
+        max-width: 285px;
+      }
+
+    h1{
+        font-size: 2rem;
+    }
 }
