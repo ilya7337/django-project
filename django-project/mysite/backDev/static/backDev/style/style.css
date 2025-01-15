@@ -16,6 +16,18 @@ h1{
     display: none;
 }
 
+.nav-link{
+  word-break: break-word;
+  color: black;
+  transition: background-color 0.3s ease, border-radius 0.3s ease, color 0.3s ease;;
+}
+
+.nav-link:hover{
+  background-color: #ced3d7;
+  border-radius: 10px;
+  color: black;
+}
+
 .img-main{
   max-width: 600px;
 }
